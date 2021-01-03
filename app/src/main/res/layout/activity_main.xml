@@ -4,23 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg2"
+    android:background="#282828"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:text="Question"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="30sp"
+        app:fontFamily="@font/roboto_bold" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="0dp"
         android:layout_marginRight="30dp"
-        app:cardCornerRadius="8dp">
-
+        app:cardCornerRadius="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg1"
+            android:background="@drawable/cards"
             android:orientation="vertical">
 
             <LinearLayout
@@ -55,20 +64,27 @@
 
     </androidx.cardview.widget.CardView>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:text="Answer"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="30sp"
+        app:fontFamily="@font/roboto_bold" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
         android:layout_marginRight="30dp"
-        app:cardCornerRadius="8dp">
+        app:cardCornerRadius="20dp">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg1"
+            android:background="@drawable/cards"
             android:orientation="vertical">
 
             <LinearLayout

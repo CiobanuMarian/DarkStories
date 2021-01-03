@@ -2,6 +2,7 @@ package com.msolutions.darkstories;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -29,15 +30,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Story.getInstance().neverDoThisButIAmTooLazy();
         Window window = getWindow();
-        window.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, WindowManager.LayoutParams.TYPE_STATUS_BAR);
-
+//        window.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, WindowManager.LayoutParams.TYPE_STATUS_BAR);
+        window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         txtAnswer = findViewById(R.id.txtAnswer);
         txtQuestion = findViewById(R.id.txtQuestion);
         btnNext = findViewById(R.id.btnNext);
         btnBack = findViewById(R.id.btnBack);
 
         txtQuestion.setText(Story.getInstance().getStories().get(index).getQuestion());
+        txtQuestion.setTextColor(Color.WHITE);
         txtAnswer.setText(Story.getInstance().getStories().get(index).getAnswer());
+        txtAnswer.setTextColor(Color.WHITE);
+
 
 
         btnBack.setOnClickListener(new View.OnClickListener() {
